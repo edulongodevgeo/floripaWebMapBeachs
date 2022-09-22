@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
+
+html, body{
+  height: 100vh;
+  /* background-color: red; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+#map {
+  height: 100%;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  /* border: #333333 solid; */
+  box-sizing: border-box;
+  border-radius: 1rem;
+
+}
+
+
+body{
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  grid-template-rows: 0.2fr 1fr 0.2fr;
+  grid-template-areas: 
+  "header header"
+  "sidebar content"
+  "sidebar content"
+  "footer footer";
+}
+
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+aside{
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.sidebar{
+  grid-area: sidebar;
+  margin: 0;
+  /* border: #dbd6d6 solid 1px;   */
+  overflow:auto;
+  box-sizing: border-box;
+
+}
+
+.sidebar-item{
+  /* border: 2px solid whitesmoke; */
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(3px);
+  border-radius: 1rem;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 15px;
+
+  color: black;
+  font-size: 25px;
+  font-family: 'Rubik Dirt', cursive;
+
+}
+
+.sidebar-item>img{
+  width: auto;
+  height: auto;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background-color: #CCCCCC;
+}
+.sidebar::-webkit-scrollbar-button {
+  border: 1px magenta dashed;
+}
+.sidebar::-webkit-scrollbar-track {
+  background: magenta;
+}
+.sidebar::-webkit-scrollbar-track-piece {
+  background: magenta;
+}
+.sidebar::-webkit-scrollbar-thumb {
+  background: #333333;
+  border-radius: 5px;
+}
+
+
+.header{
+  grid-area: header;
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  
+}
+
+.header>button{
+  margin: 0;
+  /* border: #333333 solid; */
+  /* text-shadow: blue 5px 5px; */
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  font-size: 70px;
+  color: black;
+  font-family: 'Rubik Dirt', cursive;
+
+
+}
+
+
+.content{
+  grid-area: content;
+  /* background: green; */
+}
+
+.footer{
+  height: 100%;
+  grid-area: footer;
+  /* background: orange; */
+  font-size: 35px;
+  color: black;
+  font-family: 'Rubik Dirt', cursive;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 760px){
+  body{
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.3fr 1fr 0.5fr 0.2fr;
+  grid-template-areas: 
+  "header"
+  "content"
+  "sidebar"
+  "footer";
+}
+}
+
+@media only screen and (max-width: 1024px){
+  .sidebar-item{
+    font-size: 15px;
+  }
+}
