@@ -2,7 +2,7 @@
 
 html, body{
   height: 100vh;
-  /* background-color: red; */
+  background-color: #1C1D1F;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -131,7 +131,7 @@ aside{
   cursor:pointer;
   overflow: hidden;
   font-size: 70px;
-  color: black;
+  color: whitesmoke;
   font-family: 'Rubik Dirt', cursive;
 
 
@@ -148,7 +148,7 @@ aside{
   grid-area: footer;
   /* background: orange; */
   font-size: 35px;
-  color: black;
+  color: whitesmoke;
   font-family: 'Rubik Dirt', cursive;
   text-align: center;
   display: flex;
